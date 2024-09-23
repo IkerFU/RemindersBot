@@ -16,7 +16,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env: # Or as an environment variable
+      DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.10
